@@ -51,5 +51,21 @@ class Admin extends Controller
 		$cat->update();
 		echo json_encode(array('status'=>'true','message'=>'Category Successfully Updated','reload'=>url('/admin/exam_category')));
 	}
+	public function category_status($id)
+	{
+		$cat=Oex_category::where('id',$id)->get()->first();
+		print_r($cat);
+		if($cat->status==1)
+		{
+			$status=0;
+		}	
+		else
+		{
+			$status=1;
+		}	
+		$cat1=Oex_category::where('id',$id)->get()->first();
+		$cat1->status=$status;
+		$cat1->update();	
+	}
 
 }

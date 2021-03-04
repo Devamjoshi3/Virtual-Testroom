@@ -24,3 +24,4 @@ Route::post('/admin/add_new_category','Admin@add_new_category');
 Route::get('/admin/delete_category/{id}','Admin@delete_category');
 Route::get('/admin/edit_category/{id}','Admin@edit_category');
 Route::post('/admin/edit_new_category','Admin@edit_new_category');
+Route::get('/admin/category_status/{id}','Admin@category_status');

@@ -17,3 +17,11 @@ $(document).on('submit','.database_operation',function()
     })
     return false;
 });
+$(document).on('click','.category_status',function()
+{
+    var id=$(this).attr('data-id');
+    $.get(BASE_URL+'/admin/category_status/'+id,function(fb)
+    {
+        alert('Status Successfully Changed');
+    })
+});

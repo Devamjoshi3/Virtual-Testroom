@@ -46,7 +46,7 @@
                     <tr>
                         <td> <?php echo $key=1 ?> </td>
                         <td> <?php echo $cat['name'] ?> </td>
-                        <td> <input type="checkbox" name="status"> </td>
+                        <td> <input class="category_status" data-id="<?php echo $cat['id'] ?>" <?php if($cat['status']==1) {echo "checked";} ?> type="checkbox" name="status"> </td>
                         <td> 
                             <a href="{{ url('admin/edit_category/'.$cat['id']) }}"class="btn btn-info"> Edit </a>
                             <a href="{{ url('admin/delete_category/'.$cat['id']) }}" class="btn btn-danger"> Delete </a>
